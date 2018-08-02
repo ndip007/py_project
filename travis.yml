@@ -12,6 +12,3 @@ install:
 
 script:
   - spdx-build .
-
-after_success:
-- paver doc_html

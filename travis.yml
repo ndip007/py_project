@@ -1,0 +1,17 @@
+sudo: false
+
+language: python
+
+python:
+  - 3.6.0
+
+cache: pip
+
+install:
+  - pip install git+https://github.com/ndip007/spdx-build-tool
+
+script:
+  - spdx-build .
+
+after_success:
+- paver doc_html
